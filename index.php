@@ -1,5 +1,6 @@
 <?php
-$title = "TikTok Web";
+$title = "TikTok ByMikiii";
+$icon = "./Images/monkaH.png";
 require('./parts/header.php');
 ?>
 

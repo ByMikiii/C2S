@@ -1,5 +1,6 @@
 <?php
-$title = "TikTok Web Login";
+$title = "TikTok Login ByMikiii";
+$icon = "./Images/monkaH.png";
 require('./parts/header.php');
 
 $error = isset($_GET['error']) ? $_GET['error'] : '';
