@@ -15,13 +15,13 @@ session_start();
 </head>
 <body>
 
-<a id="home-button" href="/html/index.php" class="btn btn-dark">Home</a>
+<a id="home-button" href="/TikTok/index.php" class="btn btn-dark">Home</a>
 
 <?php if (!isset($_SESSION["username"])) : ?>
       <div>
-      <a id="login-button" href="/html/login.php" class="btn btn-dark">Login</a>
+      <a id="login-button" href="/TikTok/login.php" class="btn btn-dark">Login</a>
       </div>
       <?php else : ?>
               <p class=logged-username><?php echo $_SESSION["username"] ?></p>
-              <a href="/html/phpscripts/logout.php" class= "btn btn-dark" id="logout-button">Log Out</a>
+              <a href="/TikTok/phpscripts/logout.php" class= "btn btn-dark" id="logout-button">Log Out</a>
         <?php endif; ?>

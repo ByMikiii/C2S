@@ -1,6 +1,5 @@
 body{
   background-color: rgb(216, 216, 216);
-
 }
 .mb-3{
 width: 550px;
@@ -68,4 +67,9 @@ footer{
   text-align: center;
   top: 18px;
   font-weight: bold;
+}
+#hashtag{
+  position: relative;
+  top: 280px;
+  text-align: center;
 }

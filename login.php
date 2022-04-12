@@ -11,13 +11,13 @@ $error = isset($_GET['error']) ? $_GET['error'] : '';
   <div class="row mb-3">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Username</label>
     <div class="col-sm-10">
-      <input type="username" class="form-control" name='username' required>
+      <input type="username" class="form-control" name='username' required autocomplete="off">
     </div>
   </div>
   <div class="row mb-3">
     <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" name='password' required>
+      <input type="password" class="form-control" name='password' required autocomplete="off">
     </div>
   </div>
   <p id="error-message" ><?php echo $error ?></p>
