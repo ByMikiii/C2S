@@ -19,7 +19,9 @@ if(isset($_SESSION['username'])) : ?>
   $outputHashtags = '';
   while(strlen($outputHashtags) <= 130){
    $index = rand(0, count($inputHashtags)- 1);
+   if(str_contains($outputHashtags, $inputHashtags[$index])){
     $outputHashtags .= $inputHashtags[$index] . " ";
+  }
   }
   echo $outputHashtags;
   echo '</p>';
