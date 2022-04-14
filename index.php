@@ -12,7 +12,20 @@ if(isset($_SESSION['username'])) : ?>
     <input type="url" class="form-control" name="url" placeholder="URL" autocomplete="off" >
   </div>
 </form>
-<p id="hashtag">#gaming #czsk #funny #twitchstreamer #tiktok #foryoupage #fyp #foryou #viral #love #funny #memes #followme #fail</p>
+  <?php 
+  for($i = 0; $i < 10; $i++){
+  echo '<p class="hashtag">';
+  $inputHashtags = ['#gaming', '#czsk', '#funny', '#twitchstreamer', '#tiktok', '#foryoupage', '#fyp', '#foryou', '#viral', '#love', '#funny', '#memes', '#followme', '#fail', '#trending', '#featureme', ' #lifestyle', '#beautiful', '#explore', '#comedy'];
+  $outputHashtags = '';
+  while(strlen($outputHashtags) <= 130){
+   $index = rand(0, count($inputHashtags)- 1);
+    $outputHashtags .= $inputHashtags[$index] . " ";
+  }
+  echo $outputHashtags;
+  echo '</p>';
+}
+  ?>
+
 <?php endif; ?>
 <?php
 require('./parts/footer.php');
