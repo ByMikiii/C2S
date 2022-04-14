@@ -13,7 +13,7 @@ if(isset($_SESSION['username'])) : ?>
   </div>
 </form>
   <?php 
-  for($i = 0; $i < 10; $i++){
+  for($i = 0; $i < 8; $i++){
   echo '<p class="hashtag">';
   $inputHashtags = ['#gaming', '#czsk', '#funny', '#twitchstreamer', '#tiktok', '#foryoupage', '#fyp', '#foryou', '#viral', '#love', '#funny', '#memes', '#followme', '#fail', '#trending', '#featureme', ' #lifestyle', '#beautiful', '#explore', '#comedy'];
   $outputHashtags = '';
