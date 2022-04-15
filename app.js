@@ -9,5 +9,16 @@ function generateHashtags() {
      }
    }
   navigator.clipboard.writeText(outputHashtags);
-
 }
+
+function clearUrlInput() {
+  console.log('submited');
+  document.getElementById('url-input').value = '';
+}
+/*
+document.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    console.log('Enter is pressed!');
+    document.getElementById('url-input').value = '';
+  }
+});*/
