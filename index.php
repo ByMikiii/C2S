@@ -12,25 +12,12 @@ if(isset($_SESSION['username'])) : ?>
     <input type="url" class="form-control" name="url" placeholder="URL" autocomplete="off" >
   </div>
 </form>
-<button type="button" class="btn btn-dark" id='copy-hashtags'>Magic</button>;
-  <?php 
-  for($i = 0; $i < 8; $i++){
-    echo "<div class='hashtags'>";
-    echo '<p class="hashtag">';
-    $inputHashtags = ['#gaming', '#czsk', '#funny', '#twitchstreamer', '#tiktok', '#foryoupage', '#fyp', '#foryou', '#viral', '#love', '#funny', '#memes', '#followme', '#fail', '#trending', '#featureme', ' #lifestyle', '#beautiful', '#explore', '#comedy'];
-    $outputHashtags = '';
-    while(strlen($outputHashtags) <= 130){
-     $index = rand(0, count($inputHashtags)- 1);
-     if (!str_contains($outputHashtags, $inputHashtags[$index])){
-      $outputHashtags .= $inputHashtags[$index] . " ";
-    }
-    }
-    echo $outputHashtags;
-    echo '</p>';
-    echo '<button type="button" class="btn btn-dark">Dark</button>';
-    echo '</div>';
-  }
+<div class="hashtags">
+<button type="button" class="btn btn-dark" id='copy-hashtags' onclick='generateHashtags()'>Magic</button>
+</div>
+<p id='hashtagstext'></p>
 
+  <?php 
 endif;
     ?>
   
