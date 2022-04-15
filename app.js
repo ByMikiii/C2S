@@ -1,6 +1,6 @@
 function generateHashtags() {
   const inputHashtags = ['#gaming', '#czsk', '#funny', '#twitchstreamer', '#tiktok', '#foryoupage', '#fyp', '#foryou', '#viral', '#love', '#funny', '#memes', '#followme', '#fail', '#trending', '#featureme', ' #lifestyle', '#beautiful', '#explore', '#comedy'];
-  var outputHashtags = '';
+  let outputHashtags = '';
 
   while (outputHashtags.length <= 130) {
     var index = Math.floor(Math.random() * inputHashtags.length);
@@ -8,17 +8,34 @@ function generateHashtags() {
       outputHashtags += inputHashtags[index] + ' ';
      }
    }
-  navigator.clipboard.writeText(outputHashtags);
+  copyToClipboard(outputHashtags)
+    .then(() => console.log('text copied !'))
+    .catch(() => console.log('error'));
 }
 
-function clearUrlInput() {
-  console.log('submited');
-  document.getElementById('url-input').value = '';
-}
-/*
+
 document.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
-    console.log('Enter is pressed!');
     document.getElementById('url-input').value = '';
+    generateHashtags();
   }
-});*/
+});
+
+function copyToClipboard(textToCopy) {
+    if (navigator.clipboard && window.isSecureContext) {
+        return navigator.clipboard.writeText(textToCopy);
+    } else {
+        let textArea = document.createElement("textarea");
+        textArea.value = textToCopy;
+        textArea.style.position = "fixed";
+        textArea.style.left = "-999999px";
+        textArea.style.top = "-999999px";
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        return new Promise((res, rej) => {
+            document.execCommand('copy') ? res() : rej();
+            textArea.remove();
+        });
+    }
+}

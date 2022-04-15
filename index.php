@@ -12,9 +12,7 @@ if(isset($_SESSION['username'])) : ?>
     <input type="url" class="form-control" name="url" id='url-input' placeholder="URL" autocomplete="off">
   </div>
 </form>
-<div class="hashtags">
 <button type="button" class="btn btn-dark" id='copy-hashtags' onclick='generateHashtags()'>Magic</button>
-</div>
   <?php 
 endif;
     ?>
