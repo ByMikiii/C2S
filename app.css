@@ -68,8 +68,6 @@ footer{
   top: 18px;
   font-weight: bold;
 }
-.hashtag{
-  position: relative;
-  top: 280px;
-  text-align: center;
+.hashtags{
+text-align: center;
 }

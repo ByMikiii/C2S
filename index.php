@@ -12,8 +12,10 @@ if(isset($_SESSION['username'])) : ?>
     <input type="url" class="form-control" name="url" placeholder="URL" autocomplete="off" >
   </div>
 </form>
+<button type="button" class="btn btn-dark" id='copy-hashtags'>Magic</button>;
   <?php 
   for($i = 0; $i < 8; $i++){
+    echo "<div class='hashtags'>";
     echo '<p class="hashtag">';
     $inputHashtags = ['#gaming', '#czsk', '#funny', '#twitchstreamer', '#tiktok', '#foryoupage', '#fyp', '#foryou', '#viral', '#love', '#funny', '#memes', '#followme', '#fail', '#trending', '#featureme', ' #lifestyle', '#beautiful', '#explore', '#comedy'];
     $outputHashtags = '';
@@ -25,6 +27,8 @@ if(isset($_SESSION['username'])) : ?>
     }
     echo $outputHashtags;
     echo '</p>';
+    echo '<button type="button" class="btn btn-dark">Dark</button>';
+    echo '</div>';
   }
 
 endif;
