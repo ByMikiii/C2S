@@ -2,8 +2,8 @@
 $username = $_POST['username'];
 $password = $_POST["password"];;
 
-$requiredUsername = '';
-$requiredPassword= '';
+$requiredUsername = 'bymikiii';
+$requiredPassword= 'bymikiii321';
 
 if($username == $requiredUsername && $password == $requiredPassword) {
   session_start();
