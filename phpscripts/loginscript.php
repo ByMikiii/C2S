@@ -1,18 +1,17 @@
 <?php
-require 'connection.php';
-
 $username = $_POST['username'];
-$hashedPassword = MD5($_POST["password"]);;
+$password = $_POST["password"];;
 
-$sql= "SELECT * FROM users WHERE username = '$username' AND password = '$hashedPassword' ";
-$result = mysqli_query($conn, $sql);
+$requiredUsername = '';
+$requiredPassword= '';
 
-if($result->num_rows ==1) {
-  $row = mysqli_fetch_assoc($result);
+if($username == $requiredUsername && $password == $requiredPassword) {
   session_start();
   $_SESSION['username'] = $username;
   
-  header("Location: ../index.php");
+  header("Location: /C2S/");
 } else {
-  header ("Location: ../login.php?error=Zle meno alebo heslo!");
+  header ("Location: /C2S/login.php?error=Zle meno alebo heslo!");
 }
+
+?>

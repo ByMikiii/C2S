@@ -13,15 +13,18 @@ session_start();
   <title><?php echo $title ?></title>
   <link rel="icon" type="icon" href= <?php echo $icon?> >
 </head>
-<body>
 
-<a id="home-button" href="../index.php" class="btn btn-dark">Home</a>
+<header>
+<a id="home-button" href="./phpscripts/logout.php" class="btn btn-dark">Home</a>
 
 <?php if (!isset($_SESSION["username"])) : ?>
       <div>
-      <a id="login-button" href="../login.php" class="btn btn-dark">Login</a>
+      <a id="login-button" href="/C2S/login.php" class="btn btn-dark">Login</a>
       </div>
       <?php else : ?>
               <p class=logged-username><?php echo $_SESSION["username"] ?></p>
-              <a href="../phpscripts/logout.php" class= "btn btn-dark" id="logout-button">Log Out</a>
+              <a href="./phpscripts/logout.php" class= "btn btn-dark" id="logout-button">Log Out</a>
         <?php endif; ?>
+</header>
+
+<body>

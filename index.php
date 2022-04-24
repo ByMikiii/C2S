@@ -1,5 +1,7 @@
 <?php
-$title = "TikTok ByMikiii";
+//print("\n\n<br><br>log_errors: ".ini_get('log_errors'));
+//print("\n\n<br><br>error_log: ".ini_get('error_log'));
+$title = "C2S ByMikiii";
 $icon = "./Images/monkaH.png";
 require('./parts/header.php');
 ?>
@@ -13,10 +15,8 @@ if(isset($_SESSION['username'])) : ?>
   </div>
 </form>
 <button type="button" class="btn btn-dark" id='copy-hashtags' onclick='generateHashtags()'>Magic</button>
-  <?php 
-endif;
-    ?>
   
-  <?php
+  <?php 
+  endif;
   require('./parts/footer.php');
   ?>

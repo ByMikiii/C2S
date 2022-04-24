@@ -1,13 +1,13 @@
 <?php
-$title = "TikTok Login ByMikiii";
+$title = "C2S Login ByMikiii";
 $icon = "./Images/monkaH.png";
 require('./parts/header.php');
 
 $error = isset($_GET['error']) ? $_GET['error'] : '';
 ?>
 
-<h2 id="h2-login">Login</h2>
 <form id="login-form" method="POST" action="./phpscripts/loginscript.php">
+<h2 id="h2-login">Login</h2>
   <div class="row mb-3">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Username</label>
     <div class="col-sm-10">
